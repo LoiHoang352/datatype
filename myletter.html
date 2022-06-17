@@ -14,7 +14,7 @@
         <input type="date" name="date" id="date" placeholder="Nhập ngày:">
     </form>
     <p id="result"></p>
-    <button type="button" onclick='myLeter()'> gửi ngay</button>
+    <button type="button" onclick="myLeter()"> gửi ngay</button>
 </body>
 <script>
     // viết thư
@@ -22,9 +22,17 @@
         let name = document.getElementById("name").value;
         let address = document.getElementById("place").value;
         let date = document.getElementById("date").value;
-        document.write(name + ' thân mến');
-        document.getElementById("result").innerHTML ="Em không biết phải nói sao để anh hiểu rằng, em nhớ anh thật nhiều. Em yêu anh đến khi trái tim này tan thành nghìn mảnh. Tất cả những gì em yêu thương, em khát khao và cần đến, chính là anh, mãi mãi về sau. Em chỉ muốn ở bên anh, và anh yêu hỡi, em sẽ trở thành người phụ nữ như anh mong muốn. Có phải em thật tệ hại, khi cứ nghĩ đến anh thật nhiều, thật lâu và nhất là mỗi khi đêm xuống? Em hứa sẽ sẽ cố gắng triệu triệu lần hơn thế. Nhưng hơn tất cả, em chỉ mong một ngày nào đó, anh sẽ tự hào về em, như tự hào về vợ của anh, và mẹ của các con anh (ít nhất là 2 nhé, em vừa mới quyết định đấy!). Em nhớ thật nhiều cảm giác mỗi đêm anh ôm em và ru em ngủ trong vòng tay. Đêm nay, em chỉ muốn được gần bên anh… và anh biết không, trái tim em đang đau đớn đến nhường nào. <br> Anh yêu thương, đừng bao giờ rời xa em nữa nhé. Yêu anh rất nhiều.";
-        document.write(address + date);
+
+        let p1 = name + ' thân mến!';
+        let p2 = 'Em không biết phải nói sao để anh hiểu rằng, em nhớ anh thật nhiều. Em yêu anh đến khi trái tim này tan thành nghìn mảnh. Tất cả những gì em yêu thương, em khát khao và cần đến, chính là anh, mãi mãi về sau.'
+        let p3 = ' Em chỉ muốn ở bên anh, và anh yêu hỡi, em sẽ trở thành người phụ nữ như anh mong muốn. Có phải em thật tệ hại, khi cứ nghĩ đến anh thật nhiều, thật lâu và nhất là mỗi khi đêm xuống? Em hứa sẽ sẽ cố gắng triệu triệu lần hơn thế';
+        let p4 = 'Nhưng hơn tất cả, em chỉ mong một ngày nào đó, anh sẽ tự hào về em, như tự hào về vợ của anh, và mẹ của các con anh (ít nhất là 2 nhé, em vừa mới quyết định đấy!). Em nhớ thật nhiều cảm giác mỗi đêm anh ôm em và ru em ngủ trong vòng tay. Đêm nay, em chỉ muốn được gần bên anh… và anh biết không, trái tim em đang đau đớn đến nhường nào.'
+        let p5 = ' Anh yêu thương, đừng bao giờ rời xa em nữa nhé. Yêu anh rất nhiều.'
+        let day = date.slice(8,10);
+        let mounth = date.slice(5,7);
+        let year = date.slice(0,4);
+        let endLetter = address + ', ngày ' + day + ' tháng '+ mounth +' năm '+ year;
+        document.write(p1  + '<br>' + p2 +'<br>'+ p3 +'<br>'+ p4 +'<br>'+ p5 + '<br>'+ endLetter)
     }
 </script>
 </html>
